@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+h2 {
+  text-align: center;
+  margin-top: 80px;
+  color: #333;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.container {
+  width: 450px;
+  height: 50px;
+  position: relative;
+  background-color: rgb(238, 249, 253);
+}
+.deleteBtn {
+  font-size: 1rem;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: all 0.4s;
+}
+.deleteBtn:hover {
+  border-radius: 4px;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.container input {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: none;
+  outline: none;
+  width: 450px;
+  background: transparent;
+  height: 50px;
+  font-size: 1rem;
+  padding-left: 30px;
+}
+.container button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 92%;
+  border: none;
+  outline: none;
+  width: 80px;
+  background: transparent;
+  height: 50px;
+  background-color: rgb(89, 118, 128);
+  font-size: 1rem;
+  color: #fff;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.likeBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  cursor: pointer;
+  font-size: 24px; 
+  color: red; 
+ 
+}
+
+.likeBtn i {
+  pointer-events: none; /* Ensures the icon inside the button does not interfere with the button click */
+}
+
+#showMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#showMore button {
+  color: #fff;
+  background-color: rgb(89, 118, 128);
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  display: none;
+}
+
+#search-results {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 30px;
+}
+@media (max-width: 950px) {
+  #search-results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  #search-results {
+    grid-template-columns: 1fr;
+  }
+}
+#search-results img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
